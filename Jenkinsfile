@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven'
+            arg '--network=host'
         }
     }
     stages {
