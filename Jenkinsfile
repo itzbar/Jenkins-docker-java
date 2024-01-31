@@ -2,13 +2,12 @@ pipeline {
     agent {
         docker {
             image 'maven'
-            args '-u root'
         }
     }
     stages {
         stage('compile') {
             steps {
-                sh 'mvn compile'
+                sh 'mvn clean compile -Dmaven.repo.local=m2'
             }
         }
     }
