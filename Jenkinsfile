@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('compile') {
             steps {
-                sh 'mvn clean compile -Dmaven.repo.local=m2'
+                sh '# mvn clean compile -Dmaven.repo.local=m2'
+                sh 'wget google.com'
             }
         }
     }
