@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image '... your java and maven image ...'
+            image 'okteto/maven'
         }
     }
     stages {
